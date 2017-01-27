@@ -56,41 +56,110 @@ body{
 	position: absolute; 
 }
 
-.c1{
+.c0{
 	-webkit-transform: rotateX(0deg) translateZ(240px);
 }
-.c2{
+.c1{
 	-webkit-transform: rotateX(36deg) translateZ(240px);
 }
-.c3{
+.c2{
 	-webkit-transform: rotateX(72deg) translateZ(240px);
 }
-.c4{
+.c3{
 	-webkit-transform: rotateX(108deg) translateZ(240px);
 }
-.c5{
+.c4{
 	-webkit-transform: rotateX(144deg) translateZ(240px);
 }
-.c6{
+.c5{
 	-webkit-transform: rotateX(180deg) translateZ(240px);
 }
-.c7{
+.c6{
 	-webkit-transform: rotateX(216deg) translateZ(240px);
 }
-.c8{
+.c7{
 	-webkit-transform: rotateX(252deg) translateZ(240px);
 }
-.c9{
+.c8{
 	-webkit-transform: rotateX(288deg) translateZ(240px);
 }
-.c0{
+.c9{
 	-webkit-transform: rotateX(324deg) translateZ(240px);
+}
+
+#hours1{
+	-webkit-animation: 86400s giro_hora infinite linear; 
+	transform-style: preserve-3d; 
+	-webkit-transform-origin: center center;
+}
+
+#hours2{
+	-webkit-animation: 36000s giro_medio infinite linear; 
+	transform-style: preserve-3d; 
+	-webkit-transform-origin: center center;
+}
+
+#minutes1{
+	-webkit-animation: 3600s giro_medio infinite linear; 
+	transform-style: preserve-3d; 
+	-webkit-transform-origin: center center;
+}
+
+#minutes2{
+	-webkit-animation: 600s giro_total infinite linear; 
+	transform-style: preserve-3d; 
+	-webkit-transform-origin: center center;
+}
+
+#seconds1{
+	-webkit-animation: 60s giro_medio infinite linear; 
+	transform-style: preserve-3d; 
+	-webkit-transform-origin: center center;
 }
 
 #seconds2{
 	-webkit-animation: 10s giro_total infinite linear; 
 	transform-style: preserve-3d; 
 	-webkit-transform-origin: center center;
+}
+
+@-webkit-keyframes giro_hora{
+	0%, 41.5%{
+		-webkit-transform: rotateX(0deg);
+	}
+	41.6%, 83.2%{
+		-webkit-transform: rotateX(-36deg);
+	}
+	83.3%, 99.9%{
+		-webkit-transform: rotateX(-72deg); 
+	}
+	100%{
+		-webkit-transform: rotateX(-360deg); 
+	}
+}
+
+@-webkit-keyframes giro_medio{
+	0%, 15%{
+		-webkit-transform: rotateX(0deg);
+	}
+	16.6%, 32%{
+		-webkit-transform: rotateX(-36deg);
+	}
+	33.3%, 48%{
+		-webkit-transform: rotateX(-72deg); 
+	}
+	50%, 65%{
+		-webkit-transform: rotateX(-108deg); 
+	}
+	66.6%, 82%{
+		-webkit-transform: rotateX(-144deg); 
+	}
+	83.3%, 98%{
+		-webkit-transform: rotateX(-180deg); 
+	}
+	100%{
+		-webkit-transform: rotateX(-360deg); 
+	}
 }
 
 @-webkit-keyframes giro_total{
@@ -128,3 +197,4 @@ body{
 		-webkit-transform: rotateX(-360deg); 
 	}
 }
+
