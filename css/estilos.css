@@ -15,6 +15,33 @@ body{
 	margin: 250px 50px;
 	width: 150px;
 	height: 150px;
+	transform-style: preserve-3d; 
+	position: absolute;
+	top: 0px;
+}
+
+#hours1{
+	left:0px;
+}
+
+#hours2{
+	left:160px;
+}
+
+#minutes1{
+	left:440px;
+}
+
+#minutes2{
+	left:600px;
+}
+
+#seconds1{
+	left:880px;
+}
+
+#seconds2{
+	left:1040px;
 }
 
 .card{
@@ -92,9 +119,12 @@ body{
 		-webkit-transform: rotateX(-252deg); 
 	}
 	80%, 88%{
-		-webkit-transform: rotateX(-324deg); 
+		-webkit-transform: rotateX(-288deg); 
 	}
 	90%, 98%{
+		-webkit-transform: rotateX(-324deg); 
+	}
+	100%{
 		-webkit-transform: rotateX(-360deg); 
 	}
 }
